@@ -1,0 +1,17 @@
+{
+  "name": "my shaft",
+  "cad": "C:/path/to/shaft.SLDPRT",
+  "origin": "min",
+  "material": { "name": "S45C", "E_MPa": 205000, "nu": 0.29, "density": 7850, "yield_MPa": 343 },
+  "supports": [
+    { "name": "bearing A", "type": "bearing", "from": 20, "to": 35, "axial": true, "spin": true },
+    { "name": "bearing B", "type": "bearing", "from": 180, "to": 195 }
+  ],
+  "loads": [
+    { "name": "gear", "at": 90, "from": 80, "to": 100, "force": [0, -850, 310], "torque": 12000 },
+    { "name": "coupling", "at": 230, "from": 215, "to": 245, "torque": -12000 }
+  ],
+  "probes": [60, 110, 150],
+  "mesh": { "factor": 0.5 },
+  "plots": true
+}
